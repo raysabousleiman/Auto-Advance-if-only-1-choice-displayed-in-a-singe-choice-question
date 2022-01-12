@@ -1,0 +1,21 @@
+<Script>
+  $(document).ready(function () {
+    var probetext = "#Q15_Other_10#";
+    var numChoices = $("input[type='Radio'][name^='rad']").length;
+  
+    if (numChoices == 1) {
+      // Hide the DOM
+  $("body").css('display', 'none')
+      // Select the choice
+      $("input[type='Radio'][name^='rad']")[0].click();
+  
+      // Check for OTHER
+      if ( $("input[name^='txtOE_']").length > 0 ) {
+          $("input[name^='txtOE_']").val(probetext);
+      }
+  
+      // Click NEXT
+  js_fnValidate("Next");
+    }
+  });
+</Script>
